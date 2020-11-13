@@ -2,7 +2,16 @@ ifconfig eth0 192.168.1.1 netmask 255.255.255.0 broadcast 192.168.1.255 up
 ifconfig eth1 200.100.0.27 netmask 255.255.0.0 broadcast 200.100.255.255 up
 
 # conexion de prueba
-route add default gw 200.100.0.1
+route add default gw 200.100.0.1 dev eth1
 
 # capturar tráfico
 tcpdump -i eth1 -s 65335 -w shared/r23.pcap
+
+# server12
+# traceroute 200.200.200.3 
+
+# r3
+# traceroute 100.0.0.1
+
+# r21
+# traceroute 200.0.0.15
