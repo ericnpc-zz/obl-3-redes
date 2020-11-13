@@ -1,1 +1,7 @@
 ifconfig eth0 100.0.0.1 netmask 255.255.0.0 broadcast 100.0.255.255 up
+
+# conexion de prueba
+route add default gw 100.0.100.50
+
+# capturar tráfico
+tcpdump -i eth0 -s 65335 -w shared/r3.pcap

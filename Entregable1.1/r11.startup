@@ -15,4 +15,4 @@ route add -net 200.100.0.0 netmask 255.255.0.0 gw 10.0.3.2 dev eth2
 route add -net 200.100.0.0 netmask 255.255.0.0 gw 10.0.0.2 dev eth1
 
 # si queres acceder a 200.100.0.0/16 anda por r15
-route add -net 200.100.0.0 netmask 255.255.0.0 gw 10.0.0.3 dev eth0
+route add -net 200.100.0.0 netmask 255.255.0.0 gw 10.0.0.3 dev eth1

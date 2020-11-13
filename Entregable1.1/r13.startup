@@ -3,7 +3,7 @@ ifconfig eth1 10.0.2.2 netmask 255.255.255.0 broadcast 10.0.2.255 up
 ifconfig eth2 200.100.0.1 netmask 255.255.0.0 broadcast 200.100.255.255 up
 
 # si queres acceder a 100.0.0.0/16 andá por r12
-route add -net 100.0.0.0 netmask 255.255.0.0 gw 10.0.1.1 dev eth2
+route add -net 100.0.0.0 netmask 255.255.0.0 gw 10.0.1.1 dev eth0
 
 # si queres acceder a 100.0.0.0/16 andá por r14
 route add -net 100.0.0.0 netmask 255.255.0.0 gw 10.0.2.1 dev eth1
@@ -12,7 +12,7 @@ route add -net 100.0.0.0 netmask 255.255.0.0 gw 10.0.2.1 dev eth1
 route add -net 100.0.0.0 netmask 255.255.0.0 gw 10.0.2.3 dev eth1
 
 # si queres acceder a 200.200.0.0/16 andá por r12
-route add -net 200.200.0.0 netmask 255.255.0.0 gw 10.0.1.1 dev eth2
+route add -net 200.200.0.0 netmask 255.255.0.0 gw 10.0.1.1 dev eth0
 
 # si queres acceder a 200.0.0.0/16 andá por r14
 route add -net 200.0.0.0 netmask 255.255.0.0 gw 10.0.2.1 dev eth1
