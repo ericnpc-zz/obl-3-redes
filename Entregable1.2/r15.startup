@@ -2,4 +2,4 @@ ifconfig eth0 10.0.0.3 netmask 255.255.255.0 broadcast 10.0.0.255 up
 ifconfig eth1 10.0.2.3 netmask 255.255.255.0 broadcast 10.0.2.255 up
 
 /etc/init.d/zebra start
-tcpdump -i any -w shared/r15.pcap
+# tcpdump -i any -w shared/r15.pcap
