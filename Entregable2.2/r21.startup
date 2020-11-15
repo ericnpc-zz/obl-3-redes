@@ -1,0 +1,9 @@
+ifconfig eth0 200.0.0.15 netmask 255.255.0.0 broadcast 200.0.255.255 up
+ifconfig eth1 200.0.10.1 netmask 255.255.255.248 broadcast 200.0.10.7 up
+
+# conexion a internet por defecto pasa por r14
+route add default gw 200.0.0.1 dev eth0
+
+# TODO: Ver si esto es necesario. El DHCP que instalemos en r22 puede encargarse de hacer esto.
+# conexion a LAN2 (192.168.1.0/24) pasa por r22
+# route add -net 192.168.1.0 netmask 255.255.255.0 gw 200.0.10.2 dev eth1
