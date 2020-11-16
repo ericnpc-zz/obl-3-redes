@@ -16,3 +16,6 @@ route add -net 200.200.0.0 netmask 255.255.0.0 gw 10.0.2.3 dev eth1
 
 # si queres acceder a 200.100.0.0/16 andá por r13
 route add -net 200.100.0.0 netmask 255.255.0.0 gw 10.0.2.2 dev eth1
+
+# para el resto de las direcciones mandar al r11
+route add default gw 10.0.3.1
