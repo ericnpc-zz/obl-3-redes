@@ -1,1 +1,4 @@
+# capturar para analizar los mensajes DHCP
+tcpdump -i any -w shared/pc24.pcap &
+
 /etc/init.d/networking restart
