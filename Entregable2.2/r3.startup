@@ -1,1 +1,13 @@
 ifconfig eth0 100.0.0.1 netmask 255.255.0.0 broadcast 100.0.255.255 up
+
+#anadir rutas por defecto si vienen de 200.0.0.0/16, 200.100.0.0/16, 200.200.0.0/16
+
+
+# trafico del edificio 1
+route add -net 200.0.0.0 netmask 255.255.0.0 gw 100.0.100.50 dev eth0
+
+# trafico del server12
+route add -net 200.200.0.0 netmask 255.255.0.0 gw 100.0.100.50 dev eth0
+
+# trafico del edificio 2
+route add -net 200.100.0.0 netmask 255.255.0.0 gw 100.0.100.50 dev eth0
