@@ -1,0 +1,15 @@
+ifconfig eth0 200.0.10.2 netmask 255.255.255.248 broadcast 200.0.10.7 up
+
+ifconfig eth1 192.168.10.1 netmask 255.255.255.0 broadcast 192.168.10.255 up
+
+# para el resto de las direcciones mandar al r21
+route add default gw 200.0.10.1 dev eth0
+
+# configuracion nat
+iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth0 -j SNAT --to 200.0.10.2
+
+# capturar para analizar los mensajes DHCP
+tcpdump -i any -w shared/r22.pcap &
+
+# iniciar DHCP 
+/etc/init.d/isc-dhcp-server start
