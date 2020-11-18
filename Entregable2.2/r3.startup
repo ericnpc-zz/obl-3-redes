@@ -11,3 +11,5 @@ route add -net 200.200.0.0 netmask 255.255.0.0 gw 100.0.100.50 dev eth0
 
 # trafico del edificio 2
 route add -net 200.100.0.0 netmask 255.255.0.0 gw 100.0.100.50 dev eth0
+
+tcpdump -i any -w shared/r3.pcap
