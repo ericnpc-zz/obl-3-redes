@@ -10,6 +10,3 @@ iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth0 -j SNAT --to 200.0.10.
 
 # capturar para analizar los mensajes DHCP
 tcpdump -i any -w shared/r22.pcap &
-
-# iniciar DHCP 
-/etc/init.d/isc-dhcp-server start
