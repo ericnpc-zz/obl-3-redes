@@ -1,0 +1,2 @@
+# capturar para analizar los mensajes DHCP
+tcpdump -i any -w shared/pc22.pcap &
